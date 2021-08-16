@@ -22,7 +22,6 @@ header {
     top: 0;
     background-image: url("../images/hero-bg.jpg");
     background-size: cover;
-    background-position: center;
     background-attachment: fixed;
     background-position: 80%;
 }
@@ -52,11 +51,18 @@ header nav ul {
     list-style: none;
 }
 
-header nav ul li a:hover {
+header nav ul li a {
     padding: 10px 15px;
     font-weight: lighter;
     font-size: 1.55vw;
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+header nav ul li:hover {
+    background: #fce138;
+    color: #024e76;
+    border-radius: 15px;
+    text-shadow: none;
 }
 
 footer {
@@ -91,7 +97,6 @@ section {
 .hero {
     background-image: url("../images/hero-bg.jpg");
     background-size: cover;
-    background-position: center;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -141,13 +146,17 @@ section {
     margin: 0 5px;
 }
 
-.hero-form button:hover {
+.hero-form button {
     color: #fce138;
     background-color: #024e76;
     border: none;
     padding: 10px 20px;
     font-size: 16px;
     border-radius: 10px;
+}
+
+.hero-form button:hover {
+    background-color: #39a6b2;
 }
 
 .hero-cta {
@@ -288,18 +297,6 @@ section {
     font-size: 17px;
 }
 
-.text-left {
-    text-align: left;
-}
-
-.text-right {
-    text-align: right;
-}
-
-.flex-row {
-    display: flex;
-}
-
 /* Reach Out Styles Start */
 .contact {
     background-color: #024e76;
@@ -362,7 +359,7 @@ section {
     outline: none;
 }
 
-.contact-form button:hover {
+.contact-form button {
     width: 100%;
     border: none;
     background: #fce138;
@@ -372,7 +369,25 @@ section {
     font-size: 16px;
     border-radius: 10px;
 }
+
+.contact-form button:hover {
+    color: #fce138;
+    background: #39a6b2;
+}
+
 /* Reach Out Styles End */
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.flex-row {
+    display: flex;
+}
 
 /* MEDIA QUERY FOR SMALL DESKTOP SCREENS AND SMALLER */
 @media screen and (max-width: 980px) {
@@ -451,6 +466,10 @@ section {
 
     .step-text {
         flex: 100%;
+    }
+
+    .trainer-bio h3, .trainer-bio h4 {
+        display: block;
     }
 }
 /* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
